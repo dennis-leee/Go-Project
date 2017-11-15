@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Fifteen Puzzle</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link href="./../static/img/favicon.png" sizes="196x196" rel="icon" />
+        <link href="./../static/css/puzzle.css" type="text/css" rel="stylesheet" />
+        <script src="./../static/js//puzzle.js" type="text/javascript"></script>
+    </head>
+    
+    <body>
+        <div class="myGame">
+            <!--标题-->
+            <div class="header">
+                <h1>Fifteen Puzzle</h1>
+            </div>
+            <!--状态栏-->
+            <div class="state">
+                <p>Time: <input type="text" readOnly="readonly"  value="0s" id="time" /></p>
+                <p>State: <input type="text" readOnly="readonly" value="Welcome" id="state" /></p>
+                <p>Steps: <input type="text" readOnly="readonly" value="0" id="steps" /></p>
+            </div>
+            <!--操作区-->
+            <div class="operating_area">
+                <div id="game"></div>
+                
+                <div class="menu">
+                    <button id="start">Start Game</button>
+                    <button id="resetting">Resetting</button>
+                </div>
+            </div>
+            <!--原图区-->
+            <div class="show_area">
+                <h2>original picture</h2>
+                <img src="./../static/img/miku.png" alt="miku" />
+            </div>
+            <!--提示区 -->
+            <div class="tips">
+                <h2>tips:</h2>
+                <ul>
+                    <li>The "Time" for the time you have been using, the "Steps" show the number of steps you walk now.</li>
+                    <li>Click "Resetting" to disrupt the puzzle until one you like, and then click "Start Game" to start the game, or click the "Start Game" to play directly.</li>
+                    <li>After the game starts, the "Start game" button will become "Stop Game", and if you click it, the game will stop.</li>
+                    <li>After the game starts, the "Resetting" button is banned.</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

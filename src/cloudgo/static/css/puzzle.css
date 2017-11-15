@@ -1,0 +1,219 @@
+body {
+    background-image: url(./../img/background.jpg);
+    background-repeat: no-repeat;
+}
+
+/*主体*/
+.myGame {
+    font-family: "Century Gothic", Futura, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color:rgba(0, 0, 0, 0.4);
+    margin: auto;
+    height: 900px;
+    width: 900px;
+}
+
+/*状态栏*/
+.state p{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.state input{
+    border: 1px ridge rgba(34, 119, 200, 0.6);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: inherit;
+    color: rgba(0, 0, 0, 0.8);
+    padding-left: 5px;
+}
+
+/*可操作区域和显示区域*/
+.operating_area, .show_area {
+    float: left;
+    height: 500px;
+    width: 450px;
+}
+
+/*游戏区域*/
+#game, .block_list {
+    margin: auto;
+    height: 360px;
+    width: 360px;
+    padding: 0px;
+}
+
+#game, .show_area img {
+    border: 10px ridge rgba(34, 119, 200, 0.5);
+    border-radius: 10px;
+}
+
+.block_list {
+    position: relative;
+    margin: 0px;
+}
+
+/*拼图碎片*/
+.puzzle_pieces {
+    background-image: url(./../img/miku.png);
+    border: 1px solid dimgray;
+    display: inline-block;
+    position: absolute;
+    height: 88px;
+    width: 88px;
+    transition: all 0.1s;
+}
+
+/*按钮区域*/
+button {
+    box-shadow: 5px 5px 10px #888888;
+    background-color: rgba(67, 132, 248, 0.5);
+    border: 1px outset #4384f8;
+    border-radius: 10px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 25px;
+    height: 42px;
+    width: 120px;
+    border: none;
+}
+
+#start {
+    margin-right: 15px;
+}
+
+#resetting {
+    margin-left: 15px;
+}
+
+.puzzle_pieces:hover, button:hover {
+    transform: scale(1.03, 1.03);
+}
+
+button:active {
+     border: 1px inset #4384f8;
+}
+
+/*碎片的位置*/
+#current_position_0, #current_position_1, #current_position_2, #current_position_3 {
+    top: 0;
+}
+
+#current_position_4, #current_position_5, #current_position_6, #current_position_7 {
+    top: 90px;
+}
+
+#current_position_8, #current_position_9, #current_position_10, #current_position_11 {
+    top: 180px;
+}
+
+#current_position_12, #current_position_13, #current_position_14, #current_position_15 {
+    top: 270px;
+}
+
+#current_position_0, #current_position_4, #current_position_8, #current_position_12 {
+    left: 0;
+}
+
+#current_position_1, #current_position_5, #current_position_9, #current_position_13 {
+    left: 90px;
+}
+
+#current_position_2, #current_position_6, #current_position_10, #current_position_14 {
+    left: 180px;
+}
+
+#current_position_3, #current_position_7, #current_position_11, #current_position_15 {
+    left: 270px;
+}
+
+/*将图片分割成碎片*/
+.correct_position_0 {
+    background-position: 0% 0%;
+}
+
+.correct_position_1 {
+    background-position: 33.33% 0%;
+}
+
+.correct_position_2 {
+    background-position: 66.66% 0%;
+}
+
+.correct_position_3 {
+    background-position: 99.99% 0%;
+}
+
+.correct_position_4 {
+    background-position: 0% 33.33%;
+}
+
+.correct_position_5 {
+    background-position: 33.33% 33.33%;
+}
+
+.correct_position_6 {
+    background-position: 66.66% 33.33%;
+}
+
+.correct_position_7 {
+    background-position: 99.99% 33.33%;
+}
+
+.correct_position_8 {
+    background-position: 0% 66.66%;
+}
+
+.correct_position_9 {
+    background-position: 33.33% 66.66%;
+}
+
+.correct_position_10 {
+    background-position: 66.66% 66.66%;
+}
+
+.correct_position_11 {
+    background-position: 99.99% 66.66%;
+}
+
+.correct_position_12 {
+    background-position: 0% 99.99%;
+}
+
+.correct_position_13 {
+    background-position: 33.33% 99.99%;
+}
+
+.correct_position_14 {
+    background-position: 66.66% 99.99%;
+}
+
+.blank {
+    display: none;
+}
+
+/*原图区*/
+.show_area h2 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.show_area img {
+    width: 305px;
+    height: 305px;
+}
+
+/*提示区*/
+.tips {
+    text-align: left;
+    float: left;
+    width: 900px;
+    height: 300px;
+    color: rgba(0, 0, 0, 0.7);
+    padding-left: 30px;
+}
+
+.tips li {
+    margin-bottom:5px;
+}
