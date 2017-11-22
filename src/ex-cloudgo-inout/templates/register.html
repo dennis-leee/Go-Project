@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Register</title>
+        <meta charset='utf-8'/>
+        <link href='css/signin.css' type='text/css' rel='stylesheet' />
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <form name='signin' method="post">
+            <fieldset>
+                <legend>用户注册</legend>
+                <p>用户名：<img class="username" /><input type='text' name='username' /></p>
+                <div class="username">※6~18位英文字母、数字或下划线，必须以英文字母开头</div>
+                <p>学号：<img class="studentID" /><input type='text' name='studentID' /></p>
+                <div class="studentID">※8位数字，不能以0开头</div>
+                <p>电话：<img class="phone" /><input type='text' name='phone' /></p>
+                <div class="phone">※11位数字，不能以0开头</div>
+                <p>邮箱：<img class="mail" /><input type='text' name='mail' /></p>
+                <div class="mail">※不能含有数字</div>
+                <div id="result"></div>
+                <input type='reset' value='重置'/>
+                <input type='submit' value='提交'/>
+            </fieldset>
+        </form>
+    </body>
+</html>

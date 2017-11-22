@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+[name="signin"] {
+    margin: auto;
+    width: 300px;
+    height: auto;
+}
+
+img {
+    opacity: 0;
+    margin-left: 2px;
+    float:right;
+    width: 20px;
+    height: 20px;
+}
+
+input {
+    float: right;
+}
+
+[type='reset'], [type='submit'] {
+    margin-top: 10px;
+    margin-right: 10px;  
+}
+
+div {
+    font-size: 5px;
+    height: auto;
+    width: 179px;
+    padding-left: 70px;
+    color: rgb(152, 134, 0);
+}
+
+#result {
+    float: left;
+    height: auto;
+    width: 150px;
+    margin: 5px;
+    padding: 0px;
+    color: red;
+}
