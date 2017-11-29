@@ -6,19 +6,19 @@
 
 ## **一、概述**
 > - 本部分的目标是使用 golang database/sql 写出易于阅读、扩展和可维护的数据库服务。重点是掌握经典的 “entity - dao - service” 层次结构编程模型
-- [orm][1]是个复杂的话题，其反射技术、牺牲性能获得易用性。如果你做面向程序猿的系统应用而不是面向客户的应用，database/sql 是你的第一选择；相反，**orm 可以让你获得开发效率，orm 使得你不需要编写 dao 服务！**
+> - [orm][1]是个复杂的话题，其反射技术、牺牲性能获得易用性。如果你做面向程序猿的系统应用而不是面向客户的应用，database/sql 是你的第一选择；相反，**orm 可以让你获得开发效率，orm 使得你不需要编写 dao 服务！**
 
 ## **二、任务内容**
->  1. 使用 xorm 或 gorm 实现本文的程序，从编程效率、程序结构、服务性能等角度对比 database/sql 与 orm 实现的异同！ 
- - orm 是否就是实现了 dao 的自动化？
- - 使用 ab 测试性能
- 2. 参考 Java JdbcTemplate 的设计思想，设计 GoSqlTemplate 的原型, 使得 sql 操作对于爱写 sql 的程序猿操作数据库更容易。 
-- 轻量级别的扩展，程序员的最爱
-- 程序猿不怕写 sql ，怕的是线程安全处理和错误处理
-- sql 的 CRUD 操作 database/sql 具有强烈的模板特征，适当的回调可以让程序员自己编写 sql 语句和处理 RowMapping
-- 建立在本文 SQLExecer 接口之上做包装，直观上是有利的选择
-- 暂时不用考虑占位符等数据库移植问题，方便使用 mysql 或 sqlite3 就可以
-- 参考资源：github.com/jmoiron/sqlx
+> 1. 使用 xorm 或 gorm 实现本文的程序，从编程效率、程序结构、服务性能等角度对比 database/sql 与 orm 实现的异同！ 
+> - orm 是否就是实现了 dao 的自动化？
+> - 使用 ab 测试性能
+> 2. 参考 Java JdbcTemplate 的设计思想，设计 GoSqlTemplate 的原型, 使得 sql 操作对于爱写 sql 的程序猿操作数据库更容易。 
+> - 轻量级别的扩展，程序员的最爱
+> - 程序猿不怕写 sql ，怕的是线程安全处理和错误处理
+> - sql 的 CRUD 操作 database/sql 具有强烈的模板特征，适当的回调可以让程序员自己编写 sql 语句和处理 RowMapping
+> - 建立在本文 SQLExecer 接口之上做包装，直观上是有利的选择
+> - 暂时不用考虑占位符等数据库移植问题，方便使用 mysql 或 sqlite3 就可以
+> - 参考资源：github.com/jmoiron/sqlx
 
 
 ## **三、 相关说明**
